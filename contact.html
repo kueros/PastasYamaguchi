@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="Styles/contact.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Pastas Yamaguchi</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Sobre Nosotros</a></li>
+                <li><a href="news.html">Noticias</a></li>
+                <li><a href="product.html">Productos</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Contacto</h2>
+        <form action="/submit-form" method="post">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" required></textarea>
+            <br>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Pastas Yamaguchi. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
