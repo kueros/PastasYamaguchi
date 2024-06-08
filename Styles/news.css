@@ -13,12 +13,16 @@ body {
 }
 
 .logo-container {
-    text-align: center;
+    text-align:center;
 }
 
 .logo {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%; /* Ajusta el tamaño máximo del logo al contenedor */
+    height: auto; /* Altura ajustada automáticamente */
+    position: fixed; /* Posición absoluta para el logo */
+    top: 30%; /* Alinea el borde superior del logo al 50% del contenedor */
+    left: 45%; /* Alinea el borde izquierdo del logo al 50% del contenedor */
+    transform: translate(-50%, -50%); /* Centra el logo tanto horizontal como verticalmente */
     cursor: pointer;
 }
 

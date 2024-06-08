@@ -12,14 +12,13 @@ body {
     margin: 0;
 }
 
-.logo-container {
-    text-align: center;
-}
-
 .logo {
-    max-width: 100%;
-    height: auto;
-    cursor: pointer;
+    max-width: 100%; /* Ajusta el tamaño máximo del logo al contenedor */
+    height: auto; /* Altura ajustada automáticamente */
+    position: fixed; /* Posición absoluta para el logo */
+    top: 30%; /* Alinea el borde superior del logo al 50% del contenedor */
+    left: 45%; /* Alinea el borde izquierdo del logo al 50% del contenedor */
+    transform: translate(-50%, -50%); /* Centra el logo tanto horizontal como verticalmente */
 }
 
 h1 {
@@ -33,19 +32,22 @@ h2 {
 header {
     background-color: white;
     color: rgb(8, 8, 8);
-    padding: 20px;
+    padding: 20px 500px;
 }
 
 nav ul {
     list-style-type: none;
-    padding: 0;
+    padding: 0px;
     text-align: center;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin-right: 10px;
 }
+.horizontal-list-item {
+    margin-right: 20px; /* Ajusta el espacio entre los elementos según lo necesites */
+  }
 
 nav ul li a {
     color: rgb(71, 46, 46);
@@ -60,38 +62,8 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 10px;
     position: fixed;
     bottom: 0;
     width: 100%;
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-form label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-}
-
-form button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #555;
 }

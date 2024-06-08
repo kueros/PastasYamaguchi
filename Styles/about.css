@@ -1,10 +1,9 @@
+
 body {
     font-family: 'Lora', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
-}
-body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,12 +12,16 @@ body {
 }
 
 .logo-container {
-    text-align: center;
+    text-align:center;
 }
 
 .logo {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%; /* Ajusta el tamaño máximo del logo al contenedor */
+    height: auto; /* Altura ajustada automáticamente */
+    position: fixed; /* Posición absoluta para el logo */
+    top: 30%; /* Alinea el borde superior del logo al 50% del contenedor */
+    left: 45%; /* Alinea el borde izquierdo del logo al 50% del contenedor */
+    transform: translate(-50%, -50%); /* Centra el logo tanto horizontal como verticalmente */
     cursor: pointer;
 }
 
@@ -32,7 +35,7 @@ h2 {
 
 header {
     background-color: white;
-    color: rgb(8, 8, 8);
+    color: black;
     padding: 20px;
 }
 
@@ -48,7 +51,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: rgb(71, 46, 46);
+    color: black;
     text-decoration: none;
 }
 
@@ -64,34 +67,4 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-form label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-}
-
-form button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #555;
 }
