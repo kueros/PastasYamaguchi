@@ -40,5 +40,5 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 300); // Coincide con la duración de la transición en CSS
     });
   });
-  
+
 
