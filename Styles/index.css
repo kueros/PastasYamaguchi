@@ -95,7 +95,7 @@ nav {
   transform: translate(-50%, -50%);
   transition: opacity 0.3s ease, transform 0.3s ease;
   }
-  
+
   .icon {
     opacity: 1;
     width: 40px; /* Cambia el tamaño del icono aquí */
@@ -139,12 +139,6 @@ div#map.map {
   width: 600px;
   border-radius: 10px;
   overflow: auto;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
 }
 
 footer {
