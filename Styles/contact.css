@@ -1,75 +1,78 @@
-body {
-    font-family: 'Lora', sans-serif;
+body, html {
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-}
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.logo-container {
-    text-align:center;
-}
-
-.logo {
-    max-width: 100%; /* Ajusta el tamaño máximo del logo al contenedor */
-    height: auto; /* Altura ajustada automáticamente */
-    position: fixed; /* Posición absoluta para el logo */
-    top: 30%; /* Alinea el borde superior del logo al 50% del contenedor */
-    left: 45%; /* Alinea el borde izquierdo del logo al 50% del contenedor */
-    transform: translate(-50%, -50%); /* Centra el logo tanto horizontal como verticalmente */
-    cursor: pointer;
-}
-h1 {
-    font-weight: 300;
-}
-
-h2 {
-    font-weight: 300;
-}
-
-header {
-    background-color: white;
-    color: rgb(8, 8, 8);
-    padding: 20px;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: rgb(71, 46, 46);
-    text-decoration: none;
-}
-
-main {
-    padding: 50px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
     width: 100%;
-}
+    height: 100%;
+    font-family: 'Lora', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white; /* Color de fondo opcional */
+  }
+  
+  /* Estilos para el encabezado */
+  .encabezado {
+    width: 100%;
+    display: flex;
+    justify-content: start; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    padding: 0px 0; /* Espaciado alrededor del logo */
+  }
+  
+  .logo-link {
+    display: inline-block;
+    margin: 0; /* Elimina cualquier margen alrededor del enlace */
+    padding: 0; /* Elimina cualquier relleno alrededor del enlace */
+    outline: none; /* Elimina el contorno cuando el enlace está enfocado */
+  }
+  
+  .logo-link:focus {
+    outline: none; /* Asegura que el contorno no aparezca cuando el enlace es enfocado */
+  }
+  
+  .logo {
+    display: block; /* Asegura que el logo se comporte como un bloque */
+    max-width: 90%; /* Asegura que el logo no exceda el tamaño del contenedor */
+    height: 85%; /* Mantiene la proporción del logo */
+    border: none; /* Elimina cualquier borde alrededor de la imagen */
+    cursor: pointer ; /* Cambia el cursor a una mano cuando se pasa sobre el logo */
+  }
 
-form {
+  nav {
+    width: 1440px;
+    height: 112px;
+  }
+  
+  /* Estilos para la lista horizontal */
+  .horizontal-list {
+    list-style-type: none;
+    padding: 10px;
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+  }
+  
+  .horizontal-list-item {
+    margin: 0; /* Elimina cualquier margen alrededor de los elementos de la lista */
+  }
+  
+  .horizontal-list-item a {
+    text-decoration: none;
+    color: #000; /* Color del texto */
+    padding: 10px 15px; /* Espaciado dentro de los enlaces */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave para el fondo */
+  }
+  
+  .horizontal-list-item a:hover {
+    background-color: #8d2121e6; /* Color de fondo al pasar el ratón */
+  }
+  
+  form {
     max-width: 600px;
     margin: 0 auto;
 }
@@ -98,3 +101,26 @@ form button {
 form button:hover {
     background-color: #555;
 }
+
+  main {
+    flex: 1; /* El contenido principal ocupa todo el espacio disponible */
+    padding: 50px;
+  }
+  
+
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: -1px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  footer p {
+    margin: 10px 0; /* Margen superior e inferior */
+    font-size: 14px; /* Tamaño de fuente */
+    color: #ccc; /* Color de texto gris claro */
+  }
+  

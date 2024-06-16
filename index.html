@@ -5,33 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yamaguchi</title>
     <link rel="stylesheet" href="Styles/index.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
 </head>
 <body>
-    <div class="logo-container">
-        <a href="index.html">
+    <header class="encabezado">
+        <a href="index.html" class="logo-link">
             <img src="Logo.png" alt="Logo" class="logo">
         </a>
-    </div>
-    <div id="inicio">
-    </div>
-    <header>
-        <!-- Que haya un logo que cuando uno clickea vuelva al inicio -->
-        <nav>
-            <ul class="horizontal-list">
-                <li class="horizontal-list-item"><a href="about.html">Sobre Nosotros</a></li>
-                <li class="horizontal-list-item"><a href="product.html">Productos</a></li>
-                <li class="horizontal-list-item"><a href="news.html">Noticias</a></li>
-                <li class="horizontal-list-item"><a href="contact.html">Contacto</a></li>
-            </ul>
-        </nav>
+        <div class="wrapper"></div>
     </header>
+    <nav>
+        <ul class="horizontal-list">
+            <li class="horizontal-list-item"><a href="about.html">Sobre Nosotros</a></li>
+            <li class="horizontal-list-item"><a href="product.html">Productos</a></li>
+            <li class="horizontal-list-item"><a href="news.html">Noticias</a></li>
+            <li class="horizontal-list-item"><a href="contact.html">Contacto</a></li>
+        </ul>
+    </nav>
     <main>
-        <h2>Nuestra ubicación</h2>
-
-        <!-- Aca ponemos mapa con direc y horarios -->
+        <style>
+            #map {
+                height: 100vh; /* Hace que el mapa ocupe toda la altura de la ventana */
+                width: 100%;   /* Hace que el mapa ocupe todo el ancho de la ventana */
+            }
+        </style>
+        <div class="location-container">
+            <div class="info">
+                <h2>Nuestra ubicación</h2>
+                <p>Intendente Arnoldi 2062, Virreyes, Buenos Aires, Argentina</p>
+                <p>Martes a Sábado, 10am - 2pm / 5pm - 8pm<br>Domingo, 9am - 2pm</p>    
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACvdWrdKmJrXkWhrq7gSvmASzEu8ejDIU&callback=initMap" async defer></script>
+                <script>
+                    
+                const apiKey = 'AIzaSyDVqpFYglCte6I4IPk0T8cbvT8Lp7raU60'
+                    // Esta función se llamará cuando la API de Google Maps haya terminado de cargar
+                    function initMap() {
+                        // Crear un objeto mapa y especificar el elemento HTML para mostrarlo
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            center: {lat: -34.397, lng: 150.644}, // Coordenadas de latitud y longitud
+                            zoom: 8 // Nivel de zoom
+                        });
+                    }
+                </script>
+            </div>
+            <div id="map" class="map"></div>
+        </div>
     </main>
     <footer>
         <p>&copy; 2024 Pastas Yamaguchi. Todos los derechos reservados.</p>
     </footer>
+    <script src="script.js"></script> <!-- Enlace a tu archivo JS -->
+    </div>
 </body>
 </html>
