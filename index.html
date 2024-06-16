@@ -5,23 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yamaguchi</title>
     <link rel="stylesheet" href="Styles/index.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVqpFYglCte6I4IPk0T8cbvT8Lp7raU60&callback=initMap" async defer></script>
 </head>
 <body>
     <header class="encabezado">
         <a href="index.html" class="logo-link">
-            <img src="Logo.png" alt="Logo" class="logo">
+            <img src="Assets/Logo.png" alt="Logo" class="logo">
         </a>
         <div class="wrapper"></div>
     </header>
     <nav>
         <ul class="horizontal-list">
-            <li class="horizontal-list-item"><a href="about.html">Sobre Nosotros</a></li>
-            <li class="horizontal-list-item"><a href="product.html">Productos</a></li>
-            <li class="horizontal-list-item"><a href="news.html">Noticias</a></li>
-            <li class="horizontal-list-item"><a href="contact.html">Contacto</a></li>
+            <li class="horizontal-list-item">
+                <a href="about.html">
+                    <img src="Assets/About us Icon.png" alt="Sobre nosotros" class="icon">
+                <span class="text">Sobre nosotros</span>
+            </a>
+        </li>
+            <li class="horizontal-list-item">
+                <a href="product.html">
+                    <img src="Assets/Pasta Icon.png" alt="Productos" class="icon">
+                    <span class="text">Productos</span>
+                </a>
+            </li>
+            <li class="horizontal-list-item">
+                <a href="news.html">
+                    <img src="Assets/News Icon.png" alt="Noticias" class="icon">
+                    <span class="text">Noticias</span>
+                </a>
+            </li>
+            <li class="horizontal-list-item">
+                <a href="contact.html">
+                    <img src="Assets/Email Icon.png" alt="Contacto" class="icon">
+                    <span class="text">Contacto</span>
+                </a>
+            </li>
         </ul>
     </nav>
+    <script>
+      const iconText = document.getElementById('iconText');
+  
+      iconText.addEventListener('mouseover', () => {
+        iconText.textContent = 'Buscar';
+      });
+  
+      iconText.addEventListener('mouseout', () => {
+        iconText.textContent = '🔍';
+      });
+    </script>
     <main>
         <style>
             #map {
@@ -34,7 +65,7 @@
                 <h2>Nuestra ubicación</h2>
                 <p>Intendente Arnoldi 2062, Virreyes, Buenos Aires, Argentina</p>
                 <p>Martes a Sábado, 10am - 2pm / 5pm - 8pm<br>Domingo, 9am - 2pm</p>    
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACvdWrdKmJrXkWhrq7gSvmASzEu8ejDIU&callback=initMap" async defer></script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVqpFYglCte6I4IPk0T8cbvT8Lp7raU60&callback=initMap" async defer></script>
                 <script>
                     
                 const apiKey = 'AIzaSyDVqpFYglCte6I4IPk0T8cbvT8Lp7raU60'

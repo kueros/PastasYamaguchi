@@ -50,27 +50,72 @@ body, html {
   /* Estilos para la lista horizontal */
   .horizontal-list {
     list-style-type: none;
-    padding: 10px;
+    padding: 1px;
     display: flex;
-    justify-content: center; 
-    gap: 20px; 
+    justify-content: space-between; 
+    gap: 1px; 
   }
   
   .horizontal-list-item {
-    margin: 0; /* Elimina cualquier margen alrededor de los elementos de la lista */
+    margin: 5px 0; /* Elimina cualquier margen alrededor de los elementos de la lista */
+    position: relative;
   }
   
   .horizontal-list-item a {
-    text-decoration: none;
-    color: #000; /* Color del texto */
-    padding: 10px 15px; /* Espaciado dentro de los enlaces */
-    border-radius: 5px; /* Bordes redondeados */
-    transition: background-color 0.3s; /* Transición suave para el fondo */
+    display: block;
+  position: relative;
+  width: 100px; /* Ajusta según sea necesario */
+  height: 100px; /* Ajusta según sea necesario */
+  text-decoration: none;
+  color: #000; /* Color del texto */
+  padding: 5px 5px; /* Espaciado dentro de los enlaces */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.4s; /* Transición suave para el fondo */
+  text-align: center;
+  line-height: 50px; /* Centra verticalmente */
+  text-decoration: none;
+  overflow: hidden;
   }
   
   .horizontal-list-item a:hover {
     background-color: #8d2121e6; /* Color de fondo al pasar el ratón */
   }
+
+  .icon-text {
+    position: relative;
+    width: 50px; /* Ajusta el ancho según sea necesario */
+    height: 50px; /* Ajusta la altura según sea necesario */
+  }
+  
+  .icon, .text {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    
+    .icon {
+      opacity: 1;
+      width: 40px; /* Cambia el tamaño del icono aquí */
+      height: 40px; /* Cambia el tamaño del icono aquí */
+    }
+    
+    .text {
+      opacity: 0;
+    }
+    
+    .horizontal-list-item a:hover .icon {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+    
+    .horizontal-list-item a:hover .text {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  
   
   p {
     font-size: 16px; /* Tamaño de fuente */
