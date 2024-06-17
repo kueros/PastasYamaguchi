@@ -1,42 +1,31 @@
-// Función para inicializar el mapa
-function initMap() {
-    // Ubicación del marcador
-    const location = { lat: -34.455769, lng: -58.5631392 };
+document.addEventListener('DOMContentLoaded', (event) => {
+  const logoLink = document.querySelector('.logo-link');
+  const logoImage = logoLink.querySelector('img');
 
-    // Opciones del mapa
-    const mapOptions = {
-        zoom: 15,
-        center: location
-    };
+  logoLink.addEventListener('mousemove', (e) => {
+    const rect = logoImage.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
 
-    // Crear el mapa
-    const map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-    // Añadir un marcador
-    const marker = new google.maps.Marker({
-        position: location,
-        map: map,
-        
-        title: 'Intendente Arnoldi 2062, Virreyes, Buenos Aires, Argentina'
-    });
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  const iconText = document.getElementById('iconText');
-
-  iconText.addEventListener('mouseover', () => {
-    iconText.classList.add('hidden');
-    setTimeout(() => {
-      iconText.textContent = 'Buscar';
-      iconText.classList.remove('hidden');
-    }, 300); // Coincide con la duración de la transición en CSS
+    if (x >= 0 && x <= rect.width && y >= 0 && y <= rect.height) {
+      logoLink.style.cursor = 'pointer';
+    } else {
+      logoLink.style.cursor = 'default';
+    }
   });
+});
 
-  iconText.addEventListener('mouseout', () => {
-    iconText.classList.add('hidden');
-    setTimeout(() => {
-      iconText.textContent = '🔍';
-      iconText.classList.remove('hidden');
-    }, 300); // Coincide con la duración de la transición en CSS
+
+document.addEventListener("DOMContentLoaded", function() {
+  const apiKey = 'AIzaSyDVqpFYglCte6I4IPk0T8cbvT8Lp7raU60'; // Reemplaza con tu clave API
+  const businessLocation = '-34.4406393,-58.5658106'; // Coordenadas del negocio
+  const mapIframe = document.getElementById('google-map');
+  
+  const mapUrl = `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${businessLocation}`;
+  mapIframe.src = mapUrl;
+
+  document.getElementById('como-llegar').addEventListener('click', function () {
+      const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${businessLocation}`;
+      window.open(mapsUrl, '_blank');
   });
 });

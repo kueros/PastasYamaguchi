@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yamaguchi</title>
     <link rel="stylesheet" href="Styles/index.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACvdWrdKmJrXkWhrq7gSvmASzEu8ejDIU&callback=initMap" async defer></script>
 </head>
 <body>
     <header class="encabezado">
@@ -42,37 +42,28 @@
         </ul>
     </nav>
     <main>
-        <style>
-            #map {
-                height: 100vh; /* Hace que el mapa ocupe toda la altura de la ventana */
-                width: 100%;   /* Hace que el mapa ocupe todo el ancho de la ventana */
-            }
-        </style>
         <div class="location-container">
             <div class="info">
                 <h2>Nuestra ubicación</h2>
                 <p>Intendente Arnoldi 2062, Virreyes, Buenos Aires, Argentina</p>
-                <p>Martes a Sábado, 10am - 2pm / 5pm - 8pm<br>Domingo, 9am - 2pm</p>    
-                <script>
-                    
-                const apiKey = 'YOUR_API'
-                    // Esta función se llamará cuando la API de Google Maps haya terminado de cargar
-                    function initMap() {
-                        // Crear un objeto mapa y especificar el elemento HTML para mostrarlo
-                        var map = new google.maps.Map(document.getElementById('map'), {
-                            center: {lat: -34.397, lng: 150.644}, // Coordenadas de latitud y longitud
-                            zoom: 8 // Nivel de zoom
-                        });
-                    }
-                </script>
-            </div>
-            <div id="map" class="map"></div>
+                <p>Martes a Sábado, 10am - 2pm / 5pm - 8pm<br>Domingo, 9am - 2pm</p>       
+            <br>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1644.9286720976772!2d-58.564426664163435!3d-34.455768973007686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca55b7687d983%3A0xfe90f9a0e837e23a!2sAv.%20Int.%20Adolfo%20Arnoldi%202062%2C%20B1646%20San%20Fernando%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1718585551356!5m2!1sen!2sar" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
     </main>
     <footer>
         <p>&copy; 2024 Pastas Yamaguchi. Todos los derechos reservados.</p>
     </footer>
-    <script src="Scripts/models.js"></script> <!-- Enlace a tu archivo JS -->
+    <script src="Scripts/models.js"></script>
     <script src="Scripts/controlers.js"></script>
     <script src="Scripts/index.js"></script>
     </div>
