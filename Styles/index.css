@@ -10,7 +10,7 @@ body, html {
 
 body {
   flex: 1;
-  padding: 9px;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -135,19 +135,29 @@ nav {
 
 main {
   flex: 1;
-  padding: 1px;
+  width: 100%; /* Asegura que main ocupe el ancho completo */
+  padding: 20px; /* Ajusta el padding si es necesario */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .location-container {
   width: 100%;
   max-width: 1200px; /* Limita el ancho máximo del contenedor */
   margin: 0 auto; /* Centra el contenedor horizontalmente */
-  padding: 100px; /* Añade un padding interno */
-  height: 20px;
+  padding: 5px; /* Ajusta el padding según sea necesario */
+  flex: 1; /* Permite que el contenedor de la ubicación crezca */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos dentro del contenedor */
 }
 
 .info {
-  margin-bottom: 20px; /* Añade margen inferior para separar del mapa */
+  max-width: 600px; /* Ajusta este valor según sea necesario */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  margin: 0 auto; /* Centra horizontalmente el contenido */
+  text-align: center; /* Centra el texto */
 }
 
 .map-container {
@@ -160,9 +170,10 @@ footer {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 10px 0;
-  bottom: 0;
+  padding: 8px 0;
   width: 100%;
+  position: relative; /* Asegura que el footer esté en el flujo del documento */
+  margin-top: auto; /* Empuja el footer al fondo */
 }
 
 footer p {
